@@ -134,7 +134,7 @@ public class Downloader {
 	
 	public byte[] downloadTMDToByteArray(long titleID, int version) throws IOException {
 		String version_suf = "";
-		if(version > 0) version_suf = "." + version;
+		if(version >= 0) version_suf = "." + version;
 		String URL = URL_BASE + "/" + String.format("%016X", titleID) +  "/tmd" +version_suf;
 		return downloadFileToByteArray(URL);
 	}
