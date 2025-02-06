@@ -38,7 +38,7 @@ public class NUSTitle {
 	
 	private String getTMDName(){
 		String result = "title.tmd";
-		if(version > 0 && Settings.DL_ALL_VERSIONS){
+		if(version >= 0 && Settings.DL_ALL_VERSIONS){
 			result += "." + version;
 		}
 		return result;
