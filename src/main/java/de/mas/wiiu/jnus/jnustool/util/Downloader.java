@@ -79,7 +79,7 @@ public class Downloader {
 
 	public void downloadTMD(long titleID,int version,String path) throws IOException {
 		String version_suf = "";
-		if(version > 0) version_suf = "." + version;
+		if(version >= 0) version_suf = "." + version;
 		String URL = URL_BASE + "/" + String.format("%016X", titleID) +  "/tmd" + version_suf;
 		downloadFile(URL, "title.tmd",path,null);
 		if(Settings.DL_ALL_VERSIONS) downloadFile(URL, "title.tmd"+version_suf,path,null);
